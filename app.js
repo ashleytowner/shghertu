@@ -26,6 +26,7 @@ dirs.recurseDirectory(public).then(dirs => {
 app.post('/update', (req, res) => {
   const execSync = require('child_process').execSync;
   execSync('git pull', { encoding: 'utf-8' });
+  console.log(JSON.stringify(req));
   res.send(200);
   process.exit;
 })
