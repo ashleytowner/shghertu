@@ -96,3 +96,5 @@ function ev() { runTyping() };
 typer.element.onfocus = ev;
 
 typer.element.onmouseover = ev;
+
+setTimeout(runTyping, 5000);
