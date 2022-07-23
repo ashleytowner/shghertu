@@ -1,10 +1,13 @@
 const express = require('express');
 const dirs = require('./dirs');
+const { config } = require('dotenv');
+
+config();
 
 const app = express();
 
 const public = `${__dirname}/public`;
-const port = 80;
+const port = process.env.PORT;
 
 dirs.recurseDirectory(public).then(dirs => {
   const paths = dirs.map(dir => {
