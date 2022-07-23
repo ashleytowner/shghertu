@@ -14,15 +14,11 @@ dirs.recurseDirectory(public).then(dirs => {
     return partial.join('/');
   })
   paths.forEach(path => {
-    app.get(`/${path}`, (req, res) => {
+    app.get(path.split('.')[0] === 'index' ? '/' : `/${path}`, (req, res) => {
       res.sendFile(path, { root: public });
     })
   })
 });
-
-app.get('/', (req, res) => {
-  res.sendFile('index.html', { root: public });
-})
 
 app.listen(port, () => {
   console.log(`App listening on ${port}`);

@@ -61,18 +61,32 @@ class Typer {
   }
 };
 
+const steps = [
+  's',
+  'sx',
+  'ŝ',
+  'ŝg',
+  'ŝgx',
+  'ŝĝ',
+  'ŝĝe',
+  'ŝĝer',
+  'ŝĝert',
+  'ŝĝertu',
+  'ŝĝertux',
+  'ŝĝertŭ',
+];
 
 const typer = new Typer('keyboardname');
-const wordlist = ['shghertu', 'sxgxertux', 'ŝĝertŭ'];
 let currentlyTyping = false;
 
 async function runTyping(delay = 300) {
   if (currentlyTyping) return;
   currentlyTyping = true;
-  for (let i = 0; i < wordlist.length; i++) {
+  await typer.clearText(delay);
+  for (let i = 0; i < steps.length; i++) {
+    const step = steps[i];
+    typer.text = step;
     await wait(delay);
-    await typer.clearText(delay);
-    await typer.typeString([...wordlist[i % wordlist.length]], delay);
   }
   currentlyTyping = false;
 }
