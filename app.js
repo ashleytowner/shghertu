@@ -23,9 +23,11 @@ dirs.recurseDirectory(public).then(dirs => {
   })
 });
 
-app.post('/update', () => {
+app.post('/update', (req, res) => {
   const execSync = require('child_process').execSync;
-  execSync('./update.sh', { encoding: 'utf-8' });
+  execSync('git pull', { encoding: 'utf-8' });
+  res.send(200);
+  process.exit;
 })
 
 app.listen(port, () => {
