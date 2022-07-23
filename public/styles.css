@@ -1,5 +1,5 @@
 :root {
-  font-size: 100%;
+  font-size: 16px;
   --font-color: #000000;
   --bg-color: #ffffff;
   --code-color: #dddddd;
@@ -16,6 +16,7 @@
     --surface-color: #313432;
   }
 }
+
 
 * {
   font-family: 'Courier Prime', monospace;
@@ -38,7 +39,7 @@ body {
 
 p,
 li,
-table {
+button {
   font-size: 1.2rem;
 }
 
