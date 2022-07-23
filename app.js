@@ -1,5 +1,4 @@
 const express = require('express');
-
 const dirs = require('./dirs');
 const { config } = require('dotenv');
 
