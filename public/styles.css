@@ -83,16 +83,17 @@ h2::before {
 
 .spoiler {
   position: relative;
+  display: none;
 }
 
 .spoiler:hover,
-.spoiler:hover * {
+.spoiler:hover *,
+.spoiler:focus,
+.spoiler:focus * {
   color: var(--font-color);
 }
 
-
 .spoiler::before {
-  content: 'en 🇬🇧';
   position: absolute;
   top: 50%;
   left: 50%;
@@ -100,13 +101,27 @@ h2::before {
   color: var(--font-color);
 }
 
-.spoiler:hover::before {
+.spoiler.en::before {
+  content: 'en \1F1EC\1F1E7';
+}
+
+.spoiler.es::before {
+  content: 'es \1F1EA\1F1F8';
+}
+
+.spoiler.it::before {
+  content: 'it \1F1EE\1F1F9';
+}
+
+.spoiler:hover::before,
+.spoiler:focus::before {
   content: '';
 }
 
-html[data-en="false"]
-.spoiler {
-  display: none;
+html[data-spoiler="en"] .spoiler.en,
+html[data-spoiler="it"] .spoiler.it,
+html[data-spoiler="es"] .spoiler.es {
+  display: block;
 }
 
 table {
