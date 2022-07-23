@@ -18,7 +18,6 @@ app.use(express.json({
 
 function verifyPostData(req, _, next) {
   if (!process.env.SECRET) {
-    console.log('hey');
     return next();
   }
   if (!req.rawBody) {
@@ -53,14 +52,10 @@ dirs.recurseDirectory(public).then(dirs => {
 });
 
 app.post('/update', verifyPostData, (req, res) => {
-  console.log('got here');
   const execSync = require('child_process').execSync;
   try {
-    console.log('got here 2')
     execSync('git pull', { encoding: 'utf-8' });
-    console.log('got here 3')
     res.sendStatus(200);
-    console.log('got here 4')
     process.exit();
   } catch (err) {
     res.sendStatus(500);
