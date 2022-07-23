@@ -7,16 +7,15 @@ config();
 
 const app = express();
 
-
 app.use(express.json({
-  verify: (req, res, buf, encoding) => {
+  verify: (req, _, buf, encoding) => {
     if (buf && buf.length) {
       req.rawBody = buf.toString(encoding || 'utf8');
     }
   },
 }))
 
-function verifyPostData(req, res, next) {
+function verifyPostData(req, _, next) {
   if (!req.rawBody) {
     return next('Request body empty')
   }
@@ -48,11 +47,8 @@ dirs.recurseDirectory(public).then(dirs => {
   })
 });
 
-
 app.post('/update', verifyPostData, (req, res) => {
   const execSync = require('child_process').execSync;
-  res.send('true');
-  return;
   try {
     execSync('git pull', { encoding: 'utf-8' });
     res.sendStatus(200);
