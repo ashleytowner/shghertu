@@ -6,8 +6,30 @@ const { config } = require('dotenv');
 config();
 
 const app = express();
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+
+
+app.use(express.json({
+  verify: (req, res, buf, encoding) => {
+    if (buf && buf.length) {
+      req.rawBody = buf.toString(encoding || 'utf8');
+    }
+  },
+}))
+
+function verifyPostData(req, res, next) {
+  if (!req.rawBody) {
+    return next('Request body empty')
+  }
+
+  const sig = Buffer.from(req.get(process.env.SIG_HEADER_NAME) || '', 'utf8')
+  const hmac = crypto.createHmac(process.env.SIG_HASH_ALG, process.env.SECRET)
+  const digest = Buffer.from(process.env.SIG_HASH_ALG + '=' + hmac.update(req.rawBody).digest('hex'), 'utf8')
+  if (sig.length !== digest.length || !crypto.timingSafeEqual(digest, sig)) {
+    return next(`Request body digest (${digest}) did not match ${process.env.SIG_HASH_ALG} (${sig})`)
+  }
+
+  return next()
+}
 
 const public = `${__dirname}/public`;
 const port = process.env.PORT;
@@ -26,21 +48,11 @@ dirs.recurseDirectory(public).then(dirs => {
   })
 });
 
-function hash(secret) {
-  return `sha256=${crypto
-    .createHash('sha256')
-    .update(secret)
-    .digest('hex')}`;
-}
 
-app.post('/update', (req, res) => {
-  const reqHash = req.headers['x-hub-signature-256'];
-  const secret = hash(process.env.SECRET);
-  if (reqHash !== secret) {
-    res.sendStatus(403);
-    return;
-  }
+app.post('/update', verifyPostData, (req, res) => {
   const execSync = require('child_process').execSync;
+  res.send('true');
+  return;
   try {
     execSync('git pull', { encoding: 'utf-8' });
     res.sendStatus(200);
