@@ -5,6 +5,7 @@
   --code-color: #dddddd;
   --link-color: #090;
   --surface-color: #f3f3f3;
+  --body-size: 50rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +33,7 @@ html {
 }
 
 body {
-  max-width: 50rem;
+  max-width: var(--body-size);
   margin: auto;
   padding: 2rem;
 }
@@ -57,11 +58,17 @@ h2 {
 h1::before,
 h2::before {
   content: '★ ';
-  position: absolute;
   color: var(--link-color);
-  left: -1.5rem;
-  top: 50%;
-  transform: translateY(-55%);
+}
+
+@media screen and (min-width: 55rem) {
+  h1::before,
+  h2::before {
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    transform: translateY(-55%);
+  }
 }
 
 .green {
