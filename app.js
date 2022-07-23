@@ -5,6 +5,8 @@ const { config } = require('dotenv');
 config();
 
 const app = express();
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 const public = `${__dirname}/public`;
 const port = process.env.PORT;
@@ -24,11 +26,16 @@ dirs.recurseDirectory(public).then(dirs => {
 });
 
 app.post('/update', (req, res) => {
+  console.log(JSON.stringify(req.body));
   const execSync = require('child_process').execSync;
   execSync('git pull', { encoding: 'utf-8' });
-  console.log(JSON.stringify(req));
   res.send(200);
   process.exit;
+});
+
+app.post('/test', (req, res) => {
+  console.log(JSON.stringify(req.body));
+  res.send('yep');
 })
 
 app.listen(port, () => {
