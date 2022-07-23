@@ -45,13 +45,13 @@ dirs.recurseDirectory(public).then(dirs => {
     return partial.join('/');
   })
   paths.forEach(path => {
-    app.get(path.split('.')[0] === 'index' ? '/' : `/${path}`, (req, res) => {
+    app.get(path.split('.')[0] === 'index' ? '/' : `/${path}`, (_, res) => {
       res.sendFile(path, { root: public });
     })
   })
 });
 
-app.post('/update', verifyPostData, (req, res) => {
+app.post('/update', verifyPostData, (_, res) => {
   const execSync = require('child_process').execSync;
   try {
     execSync('git pull', { encoding: 'utf-8' });
