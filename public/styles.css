@@ -125,15 +125,25 @@ html[data-spoiler="es"] .spoiler[lang="es"] {
 }
 
 table {
+  --border: 1px solid var(--font-color);
   border-collapse: collapse;
+  border: var(--border);
 }
 
 table td,
 table th
 {
-  border: 1px solid var(--font-color);
-  padding: 0.2rem;
+  padding: 0.4rem 0.5rem;
   text-align: center;
+  border-right: var(--border);
+}
+
+table th {
+  border-bottom: var(--border);
+}
+
+table :not(thead) tr:nth-child(2n-1) {
+  background: var(--surface-color);
 }
 
 button {
@@ -173,4 +183,21 @@ noscript {
   text-align: center;
   font-size: 1rem;
   font-style: italic;
+}
+
+.konvertilo {
+  position: relative;
+}
+
+.konvertilo button {
+  position: absolute;
+  top: 0.5rem;
+  right: 0;
+  opacity: 0;
+  transition: opacity ease-in-out 300ms;
+}
+
+.konvertilo:hover button,
+.konvertilo button:focus {
+  opacity: 1;
 }

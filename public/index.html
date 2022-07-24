@@ -8,7 +8,6 @@
       href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
-    <script rel="text/javascript" src="./entoggle.js"></script>
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
@@ -165,27 +164,27 @@
             <th>Por Tajpi</th>
           </thead>
           <tr>
-            <td><code>⌥+6 C</code>/<code>⌥+6 ⇧C</code></td>
+            <td><code>⌥+6 C</code>/<code>⌥+6 ⇧+C</code></td>
             <td>ĉ/Ĉ</td>
           </tr>
           <tr>
-            <td><code>⌥+6 G</code>/<code>⌥+6 ⇧G</code></td>
+            <td><code>⌥+6 G</code>/<code>⌥+6 ⇧+G</code></td>
             <td>ĝ/Ĝ</td>
           </tr>
           <tr>
-            <td><code>⌥+6 H</code>/<code>⌥+6 ⇧H</code></td>
+            <td><code>⌥+6 H</code>/<code>⌥+6 ⇧+H</code></td>
             <td>ĥ/Ĥ</td>
           </tr>
           <tr>
-            <td><code>⌥+6 J</code>/<code>⌥+6 ⇧J</code></td>
+            <td><code>⌥+6 J</code>/<code>⌥+6 ⇧+J</code></td>
             <td>ĵ/Ĵ</td>
           </tr>
           <tr>
-            <td><code>⌥+6 S</code>/<code>⌥+6 ⇧S</code></td>
+            <td><code>⌥+6 S</code>/<code>⌥+6 ⇧+S</code></td>
             <td>ŝ/Ŝ</td>
           </tr>
           <tr>
-            <td><code>⌥+B U</code>/<code>⌥+B ⇧U</code></td>
+            <td><code>⌥+B U</code>/<code>⌥+B ⇧+U</code></td>
             <td>ŭ/Ŭ</td>
           </tr>
         </table>
@@ -647,8 +646,16 @@
       convert to esperanto characters (Use the x-system):
     </p>
     <script>
+      function copyText() {
+        navigator.clipboard.writeText(document.getElementById('konvertilo-input').value);
+      }
       document.write(
-        '<textarea placeholder="Skribu ĉi tie" id="konvertilo-input"></textarea>'
+        `
+        <div class="konvertilo">
+          <textarea placeholder="Skribu ĉi tie" id="konvertilo-input"></textarea>
+          <button onclick="copyText()">Kopii</button>
+        </div>
+        `
       );
     </script>
     <noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
