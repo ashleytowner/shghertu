@@ -101,15 +101,15 @@ h2::before {
   color: var(--font-color);
 }
 
-.spoiler.en::before {
+.spoiler[lang="en"]::before {
   content: 'en \1F1EC\1F1E7';
 }
 
-.spoiler.es::before {
+.spoiler[lang="es"]::before {
   content: 'es \1F1EA\1F1F8';
 }
 
-.spoiler.it::before {
+.spoiler[lang="it"]::before {
   content: 'it \1F1EE\1F1F9';
 }
 
@@ -118,9 +118,9 @@ h2::before {
   content: '';
 }
 
-html[data-spoiler="en"] .spoiler.en,
-html[data-spoiler="it"] .spoiler.it,
-html[data-spoiler="es"] .spoiler.es {
+html[data-spoiler="en"] .spoiler[lang="en"],
+html[data-spoiler="it"] .spoiler[lang="it"],
+html[data-spoiler="es"] .spoiler[lang="es"] {
   display: block;
 }
 
