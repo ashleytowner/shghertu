@@ -11,16 +11,6 @@ config();
 
 const app = express();
 
-const usingHttps = false;
-
-function getFullUrl(req) {
-  return `${req.protocol}://${req.get('host')}${req.url}`;
-}
-
-function changeProtocol(req, protocol) {
-  return `${protocol}://${req.get('host')}${req.url}`;
-}
-
 app.use(express.json({
   verify: (req, _, buf, encoding) => {
     if (buf && buf.length) {
@@ -28,18 +18,6 @@ app.use(express.json({
     }
   },
 }))
-
-app.use((req, _, next) => {
-  console.log(req.method, getFullUrl(req), req.ip);
-  next();
-})
-
-app.use((req, res, next) => {
-  if (!req.secure && usingHttps) {
-    return res.redirect(303, changeProtocol(req, 'https'));
-  }
-  next();
-})
 
 function verifyPostData(req, _, next) {
   if (!process.env.SECRET) {
@@ -94,7 +72,6 @@ try {
   const credentials = { key: privateKey, cert: certificate };
   const httpsServer = https.createServer(credentials, app);
   httpsServer.listen(443, () => {
-    usingHttps = true;
     console.log('HTTPS Server listening on 443');
   });
 } catch (ex) {
