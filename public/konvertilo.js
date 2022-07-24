@@ -88,8 +88,8 @@ document.getElementById('konvertilo-input').onkeyup = (ev) => {
   const input = el.value;
   const translation = translate(input);
   if (translation !== input) {
-    sel.start--;
-    sel.end--;;
+    sel.start = sel.start + (translation.length - input.length);
+    sel.end = sel.end + (translation.length - input.length);
   }
   el.value = translate(input);
   setInputSelection(el, sel.start, sel.end);
