@@ -59,7 +59,7 @@ directories.recurseDirectory(rootDir).then((dirs) => {
 
 app.post('/update', verifyPostData, (_, res) => {
   try {
-    execSync('git pull', { encoding: 'utf-8' });
+    execSync('./update.sh', { encoding: 'utf-8' });
     res.sendStatus(200);
     process.exit();
   } catch (err) {
