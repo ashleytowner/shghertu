@@ -55,12 +55,15 @@
   </head>
   <body>
     <script>
-      const langs = [['/', 'Esperanto'], ['?spoiler=en', 'La Angla']];
+      const langs = [
+        ["/", "Esperanto"],
+        ["?spoiler=en", "La Angla"],
+      ];
       document.write(`
         <div>
-          ${
-            langs.map(lang => `<a href="${lang[0]}">${lang[1]}</a>`).join(' | ')
-          }
+          ${langs
+            .map((lang) => `<a href="${lang[0]}">${lang[1]}</a>`)
+            .join(" | ")}
         </div>
       `);
     </script>
@@ -644,12 +647,14 @@
       convert to esperanto characters (Use the x-system):
     </p>
     <script>
-      document.write('<textarea id="konvertilo-input"></textarea>');
+      document.write(
+        '<textarea placeholder="Skribu ĉi tie" id="konvertilo-input"></textarea>'
+      );
     </script>
     <noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
     <h2 id="kontakti">Kontakt-informoj</h2>
     <p>
-      Se vi trovos erarojn aŭ aliaj problemojn, retpoŝtu min ĉe 
+      Se vi trovos erarojn aŭ aliaj problemojn, retpoŝtu min ĉe
       <a href="mailto:retestro@sgertu.com">retestro@sgertu.com</a>
     </p>
     <h2 id="kreditoj">Kreditoj</h2>
