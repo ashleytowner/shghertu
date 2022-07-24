@@ -1,17 +1,17 @@
 function translate(input) {
   return input
-    .replace(/cx/g, 'ĉ')
-    .replace(/gx/g, 'ĝ')
-    .replace(/hx/g, 'ĥ')
-    .replace(/jx/g, 'ĵ')
-    .replace(/sx/g, 'ŝ')
-    .replace(/ux/g, 'ŭ')
-    .replace(/Cx/g, 'Ĉ')
-    .replace(/Gx/g, 'Ĝ')
-    .replace(/Hx/g, 'Ĥ')
-    .replace(/Jx/g, 'Ĵ')
-    .replace(/Sx/g, 'Ŝ')
-    .replace(/Ux/g, 'Ŭ');
+    .replace(/c[xX]/g, 'ĉ')
+    .replace(/g[xX]/g, 'ĝ')
+    .replace(/h[xX]/g, 'ĥ')
+    .replace(/j[xX]/g, 'ĵ')
+    .replace(/s[xX]/g, 'ŝ')
+    .replace(/u[xX]/g, 'ŭ')
+    .replace(/C[xX]/g, 'Ĉ')
+    .replace(/G[xX]/g, 'Ĝ')
+    .replace(/H[xX]/g, 'Ĥ')
+    .replace(/J[xX]/g, 'Ĵ')
+    .replace(/S[xX]/g, 'Ŝ')
+    .replace(/U[xX]/g, 'Ŭ');
 }
 
 function getInputSelection(el) {
