@@ -54,11 +54,17 @@
     <!-- Meta Tags Generated via https://www.opengraph.xyz -->
   </head>
   <body>
-    <div>
-      <a href="/">Esperanto</a> |
-      <a href="?spoiler=en">La Angla</a>
-      <!-- <a href="?spoiler=it">La Itala</a> -->
-    </div>
+    <script>
+      const langs = [['/', 'Esperanto'], ['?spoiler=en', 'La Angla']];
+      document.write(`
+        <div>
+          ${
+            langs.map(lang => `<a href="${lang[0]}">${lang[1]}</a>`).join(' | ')
+          }
+        </div>
+      `);
+    </script>
+    <noscript>Vi devas aktivigi "javascript" por uzi tradukojn.</noscript>
     <h1>«<span id="keyboardname" tabindex="0">ŝĝertŭ</span>»</h1>
     <p>
       Esperanto havas ses litorojn, kiu ne existas en la plej multaj klavaroj:
@@ -636,9 +642,10 @@
       If there isn't an option for your device, you can use this text box to
       convert to esperanto characters (Use the x-system):
     </p>
-    <form>
-      <textarea id="konvertilo-input"></textarea>
-    </form>
+    <script>
+      document.write('<textarea id="konvertilo-input"></textarea>');
+    </script>
+    <noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
     <h2 id="kreditoj">Kreditoj</h2>
     <ul>
       <li>

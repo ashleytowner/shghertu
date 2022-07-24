@@ -159,4 +159,12 @@ textarea {
   background: var(--surface-color);
   height: 4rem;
   resize: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+}
+
+noscript {
+  background: #DC3545;
+  padding: 1rem;
+  border-radius: 8px;
 }
