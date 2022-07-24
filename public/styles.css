@@ -168,3 +168,9 @@ noscript {
   padding: 1rem;
   border-radius: 8px;
 }
+
+.copyright {
+  text-align: center;
+  font-size: 1rem;
+  font-style: italic;
+}
