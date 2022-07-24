@@ -1,12 +1,15 @@
 const express = require('express');
+const http = require('http');
+const https = require('https');
 const crypto = require('crypto');
 const dirs = require('./dirs');
 const { config } = require('dotenv');
+const fs = require('fs');
+
 
 config();
 
 const app = express();
-
 
 app.use(express.json({
   verify: (req, _, buf, encoding) => {
@@ -63,6 +66,20 @@ app.post('/update', verifyPostData, (_, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`App listening on ${port}`);
-})
+try {
+  const privateKey = fs.readFileSync('sslcert/server.key', 'utf8');
+  const certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+  const credentials = { key: privateKey, cert: certificate };
+  const httpsServer = https.createServer(credentials, app);
+  httpsServer.listen(443, () => {
+    console.log('HTTPS Server listening on 443');
+  });
+} catch (ex) {
+  console.error('Certificates not found. Not using HTTPS');
+}
+
+const httpServer = http.createServer(app);
+
+httpServer.listen(port, () => {
+  console.log(`HTTP Server listening on ${port}`);
+});
