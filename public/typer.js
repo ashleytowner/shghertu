@@ -1,7 +1,7 @@
 function wait(ms) {
   return new Promise((res) => {
     setTimeout(res, ms);
-  })
+  });
 }
 
 class Typer {
@@ -20,7 +20,7 @@ class Typer {
    * @param {number} delay
    */
   async typeString(letterArr, delay) {
-    while(letterArr.length > 0) {
+    while (letterArr.length > 0) {
       this.append(letterArr.shift());
       await wait(delay);
     }
@@ -39,14 +39,12 @@ class Typer {
   backspace() {
     this.text = this.text
       .split('')
-      .filter((_, i, a) => {
-        return i !== a.length - 1;
-      })
+      .filter((_, i, a) => i !== a.length - 1)
       .join('');
   }
 
   append(letter) {
-    this.text = this.text + letter;
+    this.text += letter;
   }
 
   get text() {
@@ -59,7 +57,7 @@ class Typer {
   set text(val) {
     this.element.innerHTML = val;
   }
-};
+}
 
 const steps = [
   's',
@@ -91,7 +89,7 @@ async function runTyping(delay = 300) {
   currentlyTyping = false;
 }
 
-function ev() { runTyping() };
+function ev() { runTyping(); }
 
 typer.element.onfocus = ev;
 
