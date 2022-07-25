@@ -59,7 +59,8 @@ directories.recurseDirectory(rootDir).then((dirs) => {
 
 app.post('/update', verifyPostData, (_, res) => {
   try {
-    execSync('./update.sh', { encoding: 'utf-8' });
+    execSync('git pull', { encoding: 'utf-8' });
+    execSync('npm i --omit=dev')
     res.sendStatus(200);
     process.exit();
   } catch (err) {
