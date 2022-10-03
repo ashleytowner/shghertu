@@ -41,7 +41,8 @@ function verifyPostData(req, _, next) {
 }
 
 const rootDir = `${__dirname}/public`;
-const port = process.env.PORT;
+const httpPort = process.env.HTTP_PORT;
+const httpsPort = process.env.HTTPS_PORT;
 
 directories.recurseDirectory(rootDir).then((dirs) => {
   const paths = dirs.map((dir) => {
@@ -69,13 +70,16 @@ app.post('/update', verifyPostData, (_, res) => {
   }
 });
 
+
 try {
-  const privateKey = fs.readFileSync('sslcert/server.key', 'utf8');
-  const certificate = fs.readFileSync('sslcert/server.crt', 'utf8');
+  const privateKeyPath = process.env.SSL_KEY;
+  const publicKeyPath = process.env.SSL_CERT;
+  const privateKey = fs.readFileSync(privateKeyPath, 'utf8');
+  const certificate = fs.readFileSync(publicKeyPath, 'utf8');
   const credentials = { key: privateKey, cert: certificate };
   const httpsServer = https.createServer(credentials, app);
-  httpsServer.listen(443, () => {
-    console.log('HTTPS Server listening on 443');
+  httpsServer.listen(httpsPort, () => {
+    console.log(`HTTPS Server listening on port ${httpsPort}`);
   });
 } catch (ex) {
   console.error('Certificates not found. Not using HTTPS');
@@ -83,6 +87,6 @@ try {
 
 const httpServer = http.createServer(app);
 
-httpServer.listen(port, () => {
-  console.log(`HTTP Server listening on ${port}`);
+httpServer.listen(httpPort, () => {
+  console.log(`HTTP Server listening on port ${httpPort}`);
 });
