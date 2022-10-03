@@ -7,6 +7,8 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 const directories = require('./directories');
 
+const httpsServerRunning = false;
+
 config();
 
 const app = express();
@@ -40,6 +42,14 @@ function verifyPostData(req, _, next) {
   return next();
 }
 
+function secure(req, res, next) {
+  if (httpsServerRunning && !req.secure) {
+    return res.redirect(`https://${req.headers.host}${req.url}`)
+  }
+
+  next();
+}
+
 const rootDir = `${__dirname}/public`;
 const httpPort = process.env.HTTP_PORT;
 const httpsPort = process.env.HTTPS_PORT;
@@ -52,7 +62,7 @@ directories.recurseDirectory(rootDir).then((dirs) => {
     return partial.join('/');
   });
   paths.forEach((path) => {
-    app.get(path.split('.')[0] === 'index' ? '/' : `/${path}`, (_, res) => {
+    app.get(path.split('.')[0] === 'index' ? '/' : `/${path}`, secure, (_, res) => {
       res.sendFile(path, { root: rootDir });
     });
   });
@@ -80,6 +90,7 @@ try {
   const httpsServer = https.createServer(credentials, app);
   httpsServer.listen(httpsPort, () => {
     console.log(`HTTPS Server listening on port ${httpsPort}`);
+    httpsServerRunning = true;
   });
 } catch (ex) {
   console.error('Certificates not found. Not using HTTPS');
