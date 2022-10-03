@@ -70,6 +70,10 @@ app.post('/update', verifyPostData, (_, res) => {
   }
 });
 
+app.get('/foobar', (_, res) => {
+  res.send('Quack');
+});
+
 
 try {
   const privateKeyPath = process.env.SSL_KEY;
