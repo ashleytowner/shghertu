@@ -20,6 +20,7 @@ app.use(express.json({
 }));
 
 function verifyPostData(req, _, next) {
+  req.authorized = false;
   if (!process.env.SECRET) {
     return next();
   }
@@ -37,6 +38,7 @@ function verifyPostData(req, _, next) {
     return next(`Request body digest (${digest}) did not match ${process.env.SIG_HASH_ALG} (${sig})`);
   }
 
+  req.authorized = true;
   return next();
 }
 
@@ -58,18 +60,22 @@ directories.recurseDirectory(rootDir).then((dirs) => {
   });
 });
 
-app.post('/update', verifyPostData, (_, res) => {
+app.post('/update', verifyPostData, (req, res) => {
+  if (!req.authorized) {
+    res.sendStatus(401);
+  }
   try {
     execSync('git pull', { encoding: 'utf-8' });
-    execSync('npm i --omit=dev')
+    execSync('npm i --omit=dev');
     res.sendStatus(200);
+    // NOTE: This will cause the server to shut down, run it with pm2 or
+    // something similar to ensure it starts back up again.
     process.exit();
   } catch (err) {
     res.sendStatus(500);
     console.error(err);
   }
 });
-
 
 try {
   const privateKeyPath = process.env.SSL_KEY;
