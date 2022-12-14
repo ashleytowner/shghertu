@@ -1,11 +1,13 @@
 :root {
-  font-size: 16px;
   --font-color: #000000;
   --bg-color: #ffffff;
   --code-color: #dddddd;
-  --link-color: #090;
+  --accent-color: #090;
   --surface-color: #f3f3f3;
+
   --body-size: 50rem;
+  --link-color: var(--accent-color);
+  font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -13,7 +15,7 @@
     --font-color: #dddddd;
     --bg-color: #181a20;
     --code-color: #555;
-    --link-color: #090;
+    --accent-color: #090;
     --surface-color: #313432;
   }
 }
@@ -24,7 +26,8 @@
   color: var(--font-color);
 }
 
-a {
+a,
+a * {
   color: var(--link-color);
 }
 
