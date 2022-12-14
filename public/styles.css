@@ -20,6 +20,13 @@
   }
 }
 
+@media screen and (max-width: 420px) {
+  a,
+  ul li {
+    padding: 0.5rem 0;
+  }
+}
+
 
 * {
   font-family: 'Courier Prime', monospace;
@@ -131,6 +138,7 @@ table {
   --border: 1px solid var(--font-color);
   border-collapse: collapse;
   border: var(--border);
+  margin: 1rem;
 }
 
 table td,
