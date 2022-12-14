@@ -19,12 +19,13 @@ app.use(express.json({
   },
 }));
 
-function verifyPostData(req, _, next) {
-  req.authorized = false;
+function verifyPostData(req, res, next) {
   if (!process.env.SECRET) {
-    return next();
+    res.status(500);
+    return next('Internal Error');
   }
   if (!req.rawBody) {
+    res.status(400);
     return next('Request body empty');
   }
 
@@ -35,10 +36,10 @@ function verifyPostData(req, _, next) {
     'utf8'
   );
   if (sig.length !== digest.length || !crypto.timingSafeEqual(digest, sig)) {
-    return next(`Request body digest (${digest}) did not match ${process.env.SIG_HASH_ALG} (${sig})`);
+    res.status(401);
+    return next(`Request body digest did not match ${process.env.SIG_HASH_ALG} (${sig})`);
   }
 
-  req.authorized = true;
   return next();
 }
 
@@ -60,10 +61,7 @@ directories.recurseDirectory(rootDir).then((dirs) => {
   });
 });
 
-app.post('/update', verifyPostData, (req, res) => {
-  if (!req.authorized) {
-    res.sendStatus(401);
-  }
+app.post('/update', verifyPostData, (_, res) => {
   try {
     execSync('git pull', { encoding: 'utf-8' });
     execSync('npm i --omit=dev');
