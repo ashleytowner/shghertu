@@ -7,6 +7,8 @@ const fs = require('fs');
 const { execSync } = require('child_process');
 const directories = require('./directories');
 
+let isHttps = true;
+
 config();
 
 const app = express();
@@ -20,7 +22,7 @@ app.use(express.json({
 }));
 
 app.use((req, res, next) => {
-  if (req.protocol !== 'https') {
+  if (req.protocol !== 'https' && isHttps) {
     return res.redirect(`https://${req.headers.host}${req.url}`);
   }
   return next();
@@ -90,9 +92,11 @@ try {
   const credentials = { key: privateKey, cert: certificate };
   const httpsServer = https.createServer(credentials, app);
   httpsServer.listen(httpsPort, () => {
+    isHttps = true;
     console.log(`HTTPS Server listening on port ${httpsPort}`);
   });
 } catch (ex) {
+  isHttps = false;
   console.error('Certificates not found. Not using HTTPS');
 }
 
