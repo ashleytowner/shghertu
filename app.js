@@ -20,8 +20,8 @@ app.use(express.json({
 }));
 
 app.use((req, res, next) => {
-  if (req.headers['x-forwarded-proto'] !== 'https') {
-    return res.redirect(`https://${req.headers.host}${req.url}`)
+  if (req.protocol !== 'https') {
+    return res.redirect(`https://${req.headers.host}${req.url}`);
   }
   return next();
 });
