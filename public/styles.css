@@ -54,7 +54,8 @@ button {
   font-size: 1.2rem;
 }
 
-code {
+code,
+kbd {
   background: var(--code-color);
   padding: 0.1rem 0.3rem;
   border-radius: 8px;
@@ -83,55 +84,6 @@ h2::before {
 
 .green {
   color: var(--link-color);
-}
-
-.spoiler,
-.spoiler * {
-  color: var(--code-color);
-  background: var(--code-color);
-}
-
-.spoiler {
-  position: relative;
-  display: none;
-}
-
-.spoiler:hover,
-.spoiler:hover *,
-.spoiler:focus,
-.spoiler:focus * {
-  color: var(--font-color);
-}
-
-.spoiler::before {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: var(--font-color);
-}
-
-.spoiler[lang="en"]::before {
-  content: 'en \1F1EC\1F1E7';
-}
-
-.spoiler[lang="es"]::before {
-  content: 'es \1F1EA\1F1F8';
-}
-
-.spoiler[lang="it"]::before {
-  content: 'it \1F1EE\1F1F9';
-}
-
-.spoiler:hover::before,
-.spoiler:focus::before {
-  content: '';
-}
-
-html[data-spoiler="en"] .spoiler[lang="en"],
-html[data-spoiler="it"] .spoiler[lang="it"],
-html[data-spoiler="es"] .spoiler[lang="es"] {
-  display: block;
 }
 
 table {

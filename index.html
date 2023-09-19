@@ -25,7 +25,7 @@
 	<meta name="theme-color" content="#009900" />
 
 	<!-- OpenGraph Meta Tags -->
-	<meta property="og:url" content="http://52.63.77.204" />
+	<meta property="og:url" content="https://sgertu.com" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="ŝĝertŭ - Tajpu Esperanton" />
 	<meta property="og:locale" content="eo" />
@@ -37,8 +37,8 @@
 
 	<!-- Twitter Meta Tags -->
 	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="twitter:domain" content="52.63.77.204" />
-	<meta property="twitter:url" content="http://52.63.77.204" />
+	<meta property="twitter:domain" content="sgertu.com" />
+	<meta property="twitter:url" content="https://sgertu.com/" />
 	<meta name="twitter:title" content="ŝĝertŭ - Tajpu Esperanton" />
 	<meta name="twitter:description"
 		content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton." />
@@ -49,32 +49,16 @@
 </head>
 
 <body>
-	<script>
-		const langs = [
-			["/", "Esperanto"],
-			["?spoiler=en", "English"],
-		];
-		document.write(`
-        <div>
-          ${langs
-				.map((lang) => `<a href="${lang[0]}">${lang[1]}</a>`)
-				.join(" | ")}
-        </div>
-      `);
-	</script>
-	<noscript>Vi devas aktivigi "javascript" por uzi tradukojn.</noscript>
+	<nav>
+		<a href="/">Esperanto</a>
+		<a href="/en">English</a>
+	</nav>
 	<h1>«<span id="keyboardname" tabindex="0">ŝĝertŭ</span>»</h1>
 	<p>
 		Esperanto havas ses litorojn, kiuj ne ekzistas en plej multe da klavaroj:
 		ĉ, ĝ, ĥ, ĵ, ŝ, kaj ŭ. Ĉi tiu retpaĝo instruos al vi pri kiel vi povas
 		tajpi ilin en via komputilo aŭ poŝtelefono. Ĝi ankaŭ havas «konvertilon»,
 		kiu konvertos la x-sistemon al esperantaj literoj.
-	</p>
-	<p class="spoiler" lang="en">
-		Esperanto has six letters, which don't exist on most keyboards: ĉ, ĝ, ĥ,
-		ĵ, ŝ, kaj ŭ. This website will teach you how to type them on your computer
-		or phone. It also has a "converter", which will convert the x-system to
-		esperanto letters.
 	</p>
 	<h2>Enhavtabelo</h2>
 	<ul>
@@ -89,14 +73,6 @@
 	<p>
 		Ĉi tiu parto prezentas programarojn kaj instrukciojn por tajpi esperantajn
 		literojn en via komputilo aŭ poŝtelefono.
-	</p>
-	<p class="spoiler" lang="en">
-		This page presents programs and instructions for typing esperanto letters
-		on your computer or phone.
-	</p>
-	<p class="spoiler it">
-		This page presents programs and instructions for typing esperanto letters
-		on your computer or phone.
 	</p>
 	<h3>Operaciumoj</h3>
 	<ul>
@@ -115,23 +91,11 @@
 			(Spegulo:
 			<a target="_blank" href="https://sgertu.s3.ap-southeast-2.amazonaws.com/tajpi298inst.exe">Instalilo</a>,
 			<a target="_blank" href="https://sgertu.s3.ap-southeast-2.amazonaws.com/tajpi298font.zip">Fontkodo</a>)
-			<div class="spoiler" lang="en">
-				Tajpi: A program which can instantly convert your input ("sx", "gh",
-				etc.) to esperanto characters.
-			</div>
-			<div class="spoiler it">
-				Tajpi: A program which can instantly convert your input ("sx", "gh",
-				etc.) to esperanto characters.
-			</div>
 		</li>
 		<li>
 			<a href="https://cdn.discordapp.com/attachments/688501845974450190/859833254965542963/eo.zip">Tajlorita
 				klavararanĝo de CodeWeaver</a>: Kiam ĝi estas instalita, aldonu ĝin kiel kroma klavaro en la
 			lingvagordoj.
-			<div class="spoiler" lang="en">
-				Custom-Made keyboard layout by CodeWeaver: When it is installed, add
-				it as an additional keyboard in the language settings.
-			</div>
 		</li>
 	</ul>
 	<h4 id="macos">macOS</h4>
@@ -140,37 +104,33 @@
 			La klavara aranĝo "ABC - Extended" povas tajpi Esperantajn literojn. Ĉi
 			tiu tabelo prezentas la klavojn, kiujn vi devas uzi por Esperantaj
 			literoj.
-			<div class="spoiler" lang="en">
-				The "ABC - Extended" keyboard layout can type Esperanto letters. This
-				table presents the keys you must use for Esperanto letters.
-			</div>
 			<table>
 				<thead>
 					<th>Tajpu</th>
 					<th>Por Tajpi</th>
 				</thead>
 				<tr>
-					<td><code>⌥+6 C</code>/<code>⌥+6 ⇧+C</code></td>
+					<td><kbd>⌥+6 C</kbd>/<kbd>⌥+6 ⇧+C</kbd></td>
 					<td>ĉ/Ĉ</td>
 				</tr>
 				<tr>
-					<td><code>⌥+6 G</code>/<code>⌥+6 ⇧+G</code></td>
+					<td><kbd>⌥+6 G</kbd>/<kbd>⌥+6 ⇧+G</kbd></td>
 					<td>ĝ/Ĝ</td>
 				</tr>
 				<tr>
-					<td><code>⌥+6 H</code>/<code>⌥+6 ⇧+H</code></td>
+					<td><kbd>⌥+6 H</kbd>/<kbd>⌥+6 ⇧+H</kbd></td>
 					<td>ĥ/Ĥ</td>
 				</tr>
 				<tr>
-					<td><code>⌥+6 J</code>/<code>⌥+6 ⇧+J</code></td>
+					<td><kbd>⌥+6 J</kbd>/<kbd>⌥+6 ⇧+J</kbd></td>
 					<td>ĵ/Ĵ</td>
 				</tr>
 				<tr>
-					<td><code>⌥+6 S</code>/<code>⌥+6 ⇧+S</code></td>
+					<td><kbd>⌥+6 S</kbd>/<kbd>⌥+6 ⇧+S</kbd></td>
 					<td>ŝ/Ŝ</td>
 				</tr>
 				<tr>
-					<td><code>⌥+B U</code>/<code>⌥+B ⇧+U</code></td>
+					<td><kbd>⌥+B U</kbd>/<kbd>⌥+B ⇧+U</kbd></td>
 					<td>ŭ/Ŭ</td>
 				</tr>
 			</table>
@@ -178,13 +138,9 @@
 		<li>
 			<a href="https://cdn.discordapp.com/attachments/688501845974450190/940998971759935518/Esperanto.dmg">Tajlorita
 				klavararanĝo de CodeWeaver</a>
-			<div class="spoiler" lang="en">
-				Custom-made keyboard layout by CodeWeaver
-			</div>
 		</li>
 		<li>
 			<a href="https://github.com/PumpedSardines/Tajpi/tree/1.1.2#tajpi">macOS-a versio de Tajpi</a>
-			<div class="spoiler" lang="en">A macOS clone of Tajpi</div>
 		</li>
 	</ul>
 	<h4 id="linux">Linux</h4>
@@ -192,18 +148,10 @@
 		Plej multe da Linux-distribuoj jam havas Esperantan klavaron. Ĝi estas
 		trovebla en la agordoj.
 	</p>
-	<p class="spoiler" lang="en">
-		Most linux distributions already have an esperanto keyboard. You can find
-		it in the settings.
-	</p>
 	<p>
 		Oni ankaŭ povas uzi la kunigo-klavon por tajpi esperantan literojn.
 		<a href="https://eo.wikipedia.org/wiki/Kunigo-klavo">Vikipedio</a>
 		havas pli multe informojn.
-	</p>
-	<p class="spoiler" lang="en">
-		You can also use the Compose key to type esperanto
-		characters. Wikipedia has more information
 	</p>
 	<table>
 		<thead>
@@ -211,27 +159,27 @@
 			<th>Por Tajpi</th>
 		</thead>
 		<tr>
-			<td><code>Kunigo+^+c</code> / <code>Kunigo+^+C</code></td>
+			<td><kbd>Kunigo+^+c</kbd> / <kbd>Kunigo+^+C</kbd></td>
 			<td>ĉ/Ĉ</td>
 		</tr>
 		<tr>
-			<td><code>Kunigo+^+s</code> / <code>Kunigo+^+S</code></td>
+			<td><kbd>Kunigo+^+s</kbd> / <kbd>Kunigo+^+S</kbd></td>
 			<td>ŝ/Ŝ</td>
 		</tr>
 		<tr>
-			<td><code>Kunigo+^+g</code> / <code>Kunigo+^+G</code></td>
+			<td><kbd>Kunigo+^+g</kbd> / <kbd>Kunigo+^+G</kbd></td>
 			<td>ĝ/Ĝ</td>
 		</tr>
 		<tr>
-			<td><code>Kunigo+^+j</code> / <code>Kunigo+^+J</code></td>
+			<td><kbd>Kunigo+^+j</kbd> / <kbd>Kunigo+^+J</kbd></td>
 			<td>ĵ/Ĵ</td>
 		</tr>
 		<tr>
-			<td><code>Kunigo+^+h</code> / <code>Kunigo+^+h</code></td>
+			<td><kbd>Kunigo+^+h</kbd> / <kbd>Kunigo+^+h</kbd></td>
 			<td>ĥ/Ĥ</td>
 		</tr>
 		<tr>
-			<td><code>Kunigo+u+u</code> / <code>Kunigo+u+U</code></td>
+			<td><kbd>Kunigo+u+u</kbd> / <kbd>Kunigo+u+U</kbd></td>
 			<td>ŭ/Ŭ</td>
 		</tr>
 	</table>
@@ -239,10 +187,6 @@
 	<p>
 		Por tajpi en Esperanto, necesas elŝuti klavaron de ekstera liveranto. En
 		Android vi havas du elektojn:
-	</p>
-	<p class="spoiler" lang="en">
-		You will need to download a third-party keyboard that supports Esperanto.
-		On Android you have two options:
 	</p>
 	<ul>
 		<li>
@@ -260,18 +204,10 @@
 		<a href="https://apps.apple.com/us/app/microsoft-swiftkey-keyboard/id911813648">SwiftKey</a>
 		estas la plej bona elekto.
 	</p>
-	<p class="spoiler" lang="en">
-		You will need to download a third-party keyboard that supports Esperanto.
-		On iOS, SwiftKey is the best option.
-	</p>
 	<h4 id="chromeos">Chrome OS</h4>
 	<p>
 		Ne ekzistas tre bonaj elektoj per Chrome OS, sed ja estas eble tajpi
 		Esperantajn literojn.
-	</p>
-	<p class="spoiler" lang="en">
-		There isn't a great option for Chrome OS, but typiing esperanto characters
-		is possible.
 	</p>
 	<ul>
 		<li>
@@ -280,39 +216,34 @@
 				literojn. Ĉi tiu tabelo prezentas la klavojn, kiujn vi devas uzi por
 				Esperantaj literoj.
 			</p>
-			<p class="spoiler" lang="en">
-				The keyboard layout "US International Keyboard" can type esperanto
-				characters. This table shows the keys which you must use for esperanto
-				letters.
-			</p>
 			<table>
 				<thead>
 					<th>Tajpu</th>
 					<th>Por Tajpi</th>
 				</thead>
 				<tr>
-					<td><code>^ C</code> / <code>^ Shift+C</code></td>
+					<td><kbd>^ C</kbd> / <kbd>^ Shift+C</kbd></td>
 					<td>ĉ/Ĉ</td>
 				</tr>
 				<tr>
-					<td><code>^ S</code> / <code>^ Shift+S</code></td>
+					<td><kbd>^ S</kbd> / <kbd>^ Shift+S</kbd></td>
 					<td>ŝ/Ŝ</td>
 				</tr>
 				<tr>
-					<td><code>^ G</code> / <code>^ Shift+G</code></td>
+					<td><kbd>^ G</kbd> / <kbd>^ Shift+G</kbd></td>
 					<td>ĝ/Ĝ</td>
 				</tr>
 				<tr>
-					<td><code>^ J</code> / <code>^ Shift+J</code></td>
+					<td><kbd>^ J</kbd> / <kbd>^ Shift+J</kbd></td>
 					<td>ĵ/Ĵ</td>
 				</tr>
 				<tr>
-					<td><code>^ H</code> / <code>^ Shift+H</code></td>
+					<td><kbd>^ H</kbd> / <kbd>^ Shift+H</kbd></td>
 					<td>ĥ/Ĥ</td>
 				</tr>
 				<tr>
 					<td>
-						<code>AltGr+Shift+( U</code> / <code>AltGr+Shift+( Shift+U</code>
+						<kbd>AltGr+Shift+( U</kbd> / <kbd>AltGr+Shift+( Shift+U</kbd>
 					</td>
 					<td>ŭ/Ŭ</td>
 				</tr>
@@ -325,21 +256,12 @@
 				Ekzistas Esperanta klavara aranĝo, kiun oni povas instali, sed ĝi
 				estas nur mezkvalita.
 			</p>
-			<p class="spoiler" lang="en">
-				Custom-made keyboard layout by google: Google created a github
-				repository for other keyboard layouts. There is an esperanto keyboard
-				layout, which you can install, but it is very mediocre.
-			</p>
 		</li>
 	</ul>
 	<h2 id="html">HTML</h2>
 	<p>
 		Por tajpi Esperantajn literojn en HTML, necesas uzi HTML-subtenatajn signojn.
 		Jen tabelo, kiu prezentas Esperantajn literojn, kaj iliajn respektivajn signojn.
-	</p>
-	<p class="spoiler" lang="en">
-		to type esperanto characters in HTML, you must use HTML entities. Here is
-		a table which shows esperanto letters and their corresponding HTML entity.
 	</p>
 	<table>
 		<thead>
@@ -349,85 +271,85 @@
 		<tr>
 			<td>Ĉ</td>
 			<td>
-				<code>&amp;Ccirc;</code>, <code>&amp;#x108;</code>,
-				<code>&amp;#264;</code>
+				<kbd>&amp;Ccirc;</kbd>, <kbd>&amp;#x108;</kbd>,
+				<kbd>&amp;#264;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>ĉ</td>
 			<td>
-				<code>&amp;ccirc;</code>, <code>&amp;#x109;</code>,
-				<code>&amp;#265;</code>
+				<kbd>&amp;ccirc;</kbd>, <kbd>&amp;#x109;</kbd>,
+				<kbd>&amp;#265;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>Ĝ</td>
 			<td>
-				<code>&amp;Gcirc;</code>, <code>&amp;#x11C;</code>,
-				<code>&amp;#284;</code>
+				<kbd>&amp;Gcirc;</kbd>, <kbd>&amp;#x11C;</kbd>,
+				<kbd>&amp;#284;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>ĝ</td>
 			<td>
-				<code>&amp;gcirc;</code>, <code>&amp;#x11D;</code>,
-				<code>&amp;#285;</code>
+				<kbd>&amp;gcirc;</kbd>, <kbd>&amp;#x11D;</kbd>,
+				<kbd>&amp;#285;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>Ĥ</td>
 			<td>
-				<code>&amp;Hcirc;</code>, <code>&amp;#x124;</code>,
-				<code>&amp;#292;</code>
+				<kbd>&amp;Hcirc;</kbd>, <kbd>&amp;#x124;</kbd>,
+				<kbd>&amp;#292;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>ĥ</td>
 			<td>
-				<code>&amp;hcirc;</code>, <code>&amp;#x125;</code>,
-				<code>&amp;#293;</code>
+				<kbd>&amp;hcirc;</kbd>, <kbd>&amp;#x125;</kbd>,
+				<kbd>&amp;#293;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>Ĵ</td>
 			<td>
-				<code>&amp;Jcirc;</code>, <code>&amp;#x134;</code>,
-				<code>&amp;#308;</code>
+				<kbd>&amp;Jcirc;</kbd>, <kbd>&amp;#x134;</kbd>,
+				<kbd>&amp;#308;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>ĵ</td>
 			<td>
-				<code>&amp;jcirc;</code>, <code>&amp;#x135;</code>,
-				<code>&amp;#309;</code>
+				<kbd>&amp;jcirc;</kbd>, <kbd>&amp;#x135;</kbd>,
+				<kbd>&amp;#309;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>Ŝ</td>
 			<td>
-				<code>&amp;Scirc;</code>, <code>&amp;#x15C;</code>,
-				<code>&amp;#348;</code>
+				<kbd>&amp;Scirc;</kbd>, <kbd>&amp;#x15C;</kbd>,
+				<kbd>&amp;#348;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>ŝ</td>
 			<td>
-				<code>&amp;scirc;</code>, <code>&amp;#x15D;</code>,
-				<code>&amp;#349;</code>
+				<kbd>&amp;scirc;</kbd>, <kbd>&amp;#x15D;</kbd>,
+				<kbd>&amp;#349;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>Ŭ</td>
 			<td>
-				<code>&amp;Ubreve;</code>, <code>&amp;#x16C;</code>,
-				<code>&amp;#364;</code>
+				<kbd>&amp;Ubreve;</kbd>, <kbd>&amp;#x16C;</kbd>,
+				<kbd>&amp;#364;</kbd>
 			</td>
 		</tr>
 		<tr>
 			<td>ŭ</td>
 			<td>
-				<code>&amp;ubreve;</code>, <code>&amp;#x16D;</code>,
-				<code>&amp;#365;</code>
+				<kbd>&amp;ubreve;</kbd>, <kbd>&amp;#x16D;</kbd>,
+				<kbd>&amp;#365;</kbd>
 			</td>
 		</tr>
 	</table>
@@ -436,18 +358,10 @@
 		Se tute ne eblas tajpi Esperantajn literojn, ekzistas du kromaj sistemoj
 		por prezenti ilin: la h-sistemo kaj la x-sistemo.
 	</p>
-	<p class="spoiler" lang="en">
-		When you are unable to type esperanto letters, there are two other systems
-		for representing them: The h-system and the x-system.
-	</p>
 	<h3>H-sistemo</h3>
 	<p>
 		La Akademio rekomendas, ke por aferoj, kiujn oni intencis legigi, oni uzu
 		la h-sistemon.
-	</p>
-	<p class="spoiler" lang="en">
-		The Akademio recommends, that for things intended to be read, the h-system
-		should be used.
 	</p>
 	<table>
 		<thead>
@@ -484,11 +398,6 @@
 		Kvankam la x-sistemo nun estas tre populara ĉie, la Akademio rekomendas,
 		ke oni uzu ĝin nur se ne eblas uzi la h-sistemon (ekz. en ASCII-a datumbazo).
 	</p>
-	<p class="spoiler" lang="en">
-		Although the x-system is now very popular everywhere, the Akademio
-		recommends that it is only used when you can't use the h-system (e.g. in
-		an ASCII database).
-	</p>
 	<table>
 		<thead>
 			<th>Esperanta Litero</th>
@@ -523,10 +432,6 @@
 	<p>
 		Kvankam ĝi estas ne fundamenta, oni povas skribi Esperanton per la
 		cirila skribsistemo.
-	</p>
-	<p class="spoiler" lang="en">
-		While it is contrary to the fundamento, you can write esperanto with the
-		cyrillic script.
 	</p>
 	<table>
 		<thead>
@@ -651,10 +556,6 @@
 		Se ne ekzistas elekto por via aparato, vi povas uzi ĉi tiun tekstokampon,
 		kiu konvertos x-sisteman tekston al Esperantaj literoj.
 	</p>
-	<p class="spoiler" lang="en">
-		If there isn't an option for your device, you can use this text box to
-		convert to esperanto characters (Use the x-system):
-	</p>
 	<script>
 		function copyText() {
 			navigator.clipboard.writeText(document.getElementById('konvertilo-input').value);
@@ -674,9 +575,6 @@
 		Se vi trovas erarojn aŭ aliajn problemojn, sendu retpoŝton al mi ĉe
 		<a href="mailto:retestro@sgertu.com">retestro@sgertu.com</a>
 	</p>
-	<p class="spoiler" lang="en">
-		If you find errors or other problems, email me at retestro@sgertu.com
-	</p>
 	<h2 id="agnostoj">Agnostoj</h2>
 	<ul>
 		<li>
@@ -695,7 +593,6 @@
 	</ul>
 	<p class="copyright">&copy; Aŝlio 2022</p>
 	<script type="text/javascript" src="./public/typer.js"></script>
-	<script type="text/javascript" src="./public/spoilers.js"></script>
 	<script type="text/javascript" src="./public/konvertilo.js"></script>
 </body>
 
