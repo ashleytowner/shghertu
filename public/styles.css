@@ -158,7 +158,7 @@ noscript {
   transition: opacity ease-in-out 300ms;
 }
 
-.konvertilo[disabled] button {
+.konvertilo > #konvertilo-input[disabled] + button {
   display: none;
 }
 
