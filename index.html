@@ -1,595 +1,655 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="eo">
-<head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-EJMLFEJN6J"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() {dataLayer.push(arguments);}
-		gtag('js', new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-EJMLFEJN6J"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-		gtag('config', 'G-EJMLFEJN6J');
-	</script>
-	<link rel="stylesheet" href="./public/styles.css" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
-		rel="stylesheet" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-	<link rel="icon" type="image/x-icon" href="./public/images/favicon.ico" />
+      gtag("config", "G-EJMLFEJN6J");
+    </script>
+    <link rel="stylesheet" href="./public/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+    <link rel="icon" type="image/x-icon" href="./public/images/favicon.ico" />
 
-	<!-- HTML Meta Tags -->
-	<title>ŝĝertŭ - Tajpu Esperanton</title>
-	<meta name="description"
-		content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton." />
-	<meta name="theme-color" content="#009900" />
+    <!-- HTML Meta Tags -->
+    <title>ŝĝertŭ - Tajpu Esperanton</title>
+    <meta
+      name="description"
+      content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton."
+    />
+    <meta name="theme-color" content="#009900" />
 
-	<!-- OpenGraph Meta Tags -->
-	<meta property="og:url" content="https://sgertu.com" />
-	<meta property="og:type" content="website" />
-	<meta property="og:title" content="ŝĝertŭ - Tajpu Esperanton" />
-	<meta property="og:locale" content="eo" />
-	<meta property="og:site_name" content="ŝĝertŭ" />
-	<meta property="og:image:alt" content="the words 'ŝĝertu: tajpu esperanton' with a green star above." />
-	<meta property="og:description"
-		content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton." />
-	<meta property="og:image" content="/images/banner.jpg" />
+    <!-- OpenGraph Meta Tags -->
+    <meta property="og:url" content="https://sgertu.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="ŝĝertŭ - Tajpu Esperanton" />
+    <meta property="og:locale" content="eo" />
+    <meta property="og:site_name" content="ŝĝertŭ" />
+    <meta
+      property="og:image:alt"
+      content="the words 'ŝĝertu: tajpu esperanton' with a green star above."
+    />
+    <meta
+      property="og:description"
+      content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton."
+    />
+    <meta property="og:image" content="/images/banner.jpg" />
 
-	<!-- Twitter Meta Tags -->
-	<meta name="twitter:card" content="summary_large_image" />
-	<meta property="twitter:domain" content="sgertu.com" />
-	<meta property="twitter:url" content="https://sgertu.com/" />
-	<meta name="twitter:title" content="ŝĝertŭ - Tajpu Esperanton" />
-	<meta name="twitter:description"
-		content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton." />
-	<meta name="twitter:image" content="/images/banner.jpg" />
-	<meta name="twitter:image:alt" content="the words 'ŝĝertu: tajpu esperanton' with a green star above." />
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta property="twitter:domain" content="sgertu.com" />
+    <meta property="twitter:url" content="https://sgertu.com/" />
+    <meta name="twitter:title" content="ŝĝertŭ - Tajpu Esperanton" />
+    <meta
+      name="twitter:description"
+      content="Lernu kiel tajpi esperanton per via klavaro, kun instrukcioj por Windows, MacOS, Linux, Chromebook kaj pli! Krome: Konvertilo se via aparato ne povas tajpi esperanton."
+    />
+    <meta name="twitter:image" content="/images/banner.jpg" />
+    <meta
+      name="twitter:image:alt"
+      content="the words 'ŝĝertu: tajpu esperanton' with a green star above."
+    />
 
-	<!-- Meta Tags Generated via https://www.opengraph.xyz -->
-</head>
+    <!-- Meta Tags Generated via https://www.opengraph.xyz -->
+  </head>
 
-<body>
-	<nav>
-		<a href="/">Esperanto</a>
-		<a href="/en">English</a>
-	</nav>
-	<h1>«<span id="keyboardname" tabindex="0">ŝĝertŭ</span>»</h1>
-	<p>
-		Esperanto havas ses litorojn, kiuj ne ekzistas en plej multe da klavaroj:
-		ĉ, ĝ, ĥ, ĵ, ŝ, kaj ŭ. Ĉi tiu retpaĝo instruos al vi pri kiel vi povas
-		tajpi ilin en via komputilo aŭ poŝtelefono. Ĝi ankaŭ havas «konvertilon»,
-		kiu konvertos la x-sistemon al esperantaj literoj.
-	</p>
-	<h2>Enhavtabelo</h2>
-	<ul>
-		<li><a href="#klavaro">Esperantaj klavaroj</a></li>
-		<li><a href="#html">HTML</a></li>
-		<li><a href="#aliajsistemoj">Aliaj sistemoj por Skribi</a></li>
-		<li><a href="#konvertilo">Konvertilo</a></li>
-		<li><a href="#kontakti">Kontakt-informoj</a></li>
-		<li><a href="#agnostoj">Agnostoj</a></li>
-	</ul>
-	<h2 id="klavaro">Esperantaj Klavaroj</h2>
-	<p>
-		Ĉi tiu parto prezentas programarojn kaj instrukciojn por tajpi esperantajn
-		literojn en via komputilo aŭ poŝtelefono.
-	</p>
-	<h3>Operaciumoj</h3>
-	<ul>
-		<li><a href="#windows">Windows</a></li>
-		<li><a href="#macos">macOS</a></li>
-		<li><a href="#linux">Linux</a></li>
-		<li><a href="#android">Android</a></li>
-		<li><a href="#ios">iOS / iPad OS</a></li>
-		<li><a href="#chromeos">Chrome OS</a></li>
-	</ul>
-	<h4 id="windows">Windows</h4>
-	<ul>
-		<li>
-			<a href="http://www.zz9pza.net/tajpi/en/">Tajpi</a>: Programaro, kiu tuj
-			konvertas vian enigon («sx», «gh», k.t.p.) al esperantaj literoj.
-			(Spegulo:
-			<a target="_blank" href="https://sgertu.s3.ap-southeast-2.amazonaws.com/tajpi298inst.exe">Instalilo</a>,
-			<a target="_blank" href="https://sgertu.s3.ap-southeast-2.amazonaws.com/tajpi298font.zip">Fontkodo</a>)
-		</li>
-		<li>
-			<a href="https://cdn.discordapp.com/attachments/688501845974450190/859833254965542963/eo.zip">Tajlorita
-				klavararanĝo de CodeWeaver</a>: Kiam ĝi estas instalita, aldonu ĝin kiel kroma klavaro en la
-			lingvagordoj.
-		</li>
-	</ul>
-	<h4 id="macos">macOS</h4>
-	<ul>
-		<li>
-			La klavara aranĝo "ABC - Extended" povas tajpi Esperantajn literojn. Ĉi
-			tiu tabelo prezentas la klavojn, kiujn vi devas uzi por Esperantaj
-			literoj.
-			<table>
-				<thead>
-					<th>Tajpu</th>
-					<th>Por Tajpi</th>
-				</thead>
-				<tr>
-					<td><kbd>⌥+6 C</kbd>/<kbd>⌥+6 ⇧+C</kbd></td>
-					<td>ĉ/Ĉ</td>
-				</tr>
-				<tr>
-					<td><kbd>⌥+6 G</kbd>/<kbd>⌥+6 ⇧+G</kbd></td>
-					<td>ĝ/Ĝ</td>
-				</tr>
-				<tr>
-					<td><kbd>⌥+6 H</kbd>/<kbd>⌥+6 ⇧+H</kbd></td>
-					<td>ĥ/Ĥ</td>
-				</tr>
-				<tr>
-					<td><kbd>⌥+6 J</kbd>/<kbd>⌥+6 ⇧+J</kbd></td>
-					<td>ĵ/Ĵ</td>
-				</tr>
-				<tr>
-					<td><kbd>⌥+6 S</kbd>/<kbd>⌥+6 ⇧+S</kbd></td>
-					<td>ŝ/Ŝ</td>
-				</tr>
-				<tr>
-					<td><kbd>⌥+B U</kbd>/<kbd>⌥+B ⇧+U</kbd></td>
-					<td>ŭ/Ŭ</td>
-				</tr>
-			</table>
-		</li>
-		<li>
-			<a href="https://cdn.discordapp.com/attachments/688501845974450190/940998971759935518/Esperanto.dmg">Tajlorita
-				klavararanĝo de CodeWeaver</a>
-		</li>
-		<li>
-			<a href="https://github.com/PumpedSardines/Tajpi/tree/1.1.2#tajpi">macOS-a versio de Tajpi</a>
-		</li>
-	</ul>
-	<h4 id="linux">Linux</h4>
-	<p>
-		Plej multe da Linux-distribuoj jam havas Esperantan klavaron. Ĝi estas
-		trovebla en la agordoj.
-	</p>
-	<p>
-		Oni ankaŭ povas uzi la kunigo-klavon por tajpi esperantan literojn.
-		<a href="https://eo.wikipedia.org/wiki/Kunigo-klavo">Vikipedio</a>
-		havas pli multe informojn.
-	</p>
-	<table>
-		<thead>
-			<th>Tajpu</th>
-			<th>Por Tajpi</th>
-		</thead>
-		<tr>
-			<td><kbd>Kunigo+^+c</kbd> / <kbd>Kunigo+^+C</kbd></td>
-			<td>ĉ/Ĉ</td>
-		</tr>
-		<tr>
-			<td><kbd>Kunigo+^+s</kbd> / <kbd>Kunigo+^+S</kbd></td>
-			<td>ŝ/Ŝ</td>
-		</tr>
-		<tr>
-			<td><kbd>Kunigo+^+g</kbd> / <kbd>Kunigo+^+G</kbd></td>
-			<td>ĝ/Ĝ</td>
-		</tr>
-		<tr>
-			<td><kbd>Kunigo+^+j</kbd> / <kbd>Kunigo+^+J</kbd></td>
-			<td>ĵ/Ĵ</td>
-		</tr>
-		<tr>
-			<td><kbd>Kunigo+^+h</kbd> / <kbd>Kunigo+^+h</kbd></td>
-			<td>ĥ/Ĥ</td>
-		</tr>
-		<tr>
-			<td><kbd>Kunigo+u+u</kbd> / <kbd>Kunigo+u+U</kbd></td>
-			<td>ŭ/Ŭ</td>
-		</tr>
-	</table>
-	<h4 id="android">Android</h4>
-	<p>
-		Por tajpi en Esperanto, necesas elŝuti klavaron de ekstera liveranto. En
-		Android vi havas du elektojn:
-	</p>
-	<ul>
-		<li>
-			<a
-				href="https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en_US&gl=US">Gboard</a>
-		</li>
-		<li>
-			<a href="https://play.google.com/store/apps/details?id=com.touchtype.swiftkey">Swiftkey</a>
-		</li>
-	</ul>
-	<h4 id="ios">iOS / iPad OS</h4>
-	<p>
-		Vi devos elŝuti aparte liveritan klavaron, kiu subtenas Esperanton. En
-		iOS,
-		<a href="https://apps.apple.com/us/app/microsoft-swiftkey-keyboard/id911813648">SwiftKey</a>
-		estas la plej bona elekto.
-	</p>
-	<h4 id="chromeos">Chrome OS</h4>
-	<p>
-		Ne ekzistas tre bonaj elektoj per Chrome OS, sed ja estas eble tajpi
-		Esperantajn literojn.
-	</p>
-	<ul>
-		<li>
-			<p>
-				La klavara aranĝo "US International Keyboard" povas tajpi Esperantajn
-				literojn. Ĉi tiu tabelo prezentas la klavojn, kiujn vi devas uzi por
-				Esperantaj literoj.
-			</p>
-			<table>
-				<thead>
-					<th>Tajpu</th>
-					<th>Por Tajpi</th>
-				</thead>
-				<tr>
-					<td><kbd>^ C</kbd> / <kbd>^ Shift+C</kbd></td>
-					<td>ĉ/Ĉ</td>
-				</tr>
-				<tr>
-					<td><kbd>^ S</kbd> / <kbd>^ Shift+S</kbd></td>
-					<td>ŝ/Ŝ</td>
-				</tr>
-				<tr>
-					<td><kbd>^ G</kbd> / <kbd>^ Shift+G</kbd></td>
-					<td>ĝ/Ĝ</td>
-				</tr>
-				<tr>
-					<td><kbd>^ J</kbd> / <kbd>^ Shift+J</kbd></td>
-					<td>ĵ/Ĵ</td>
-				</tr>
-				<tr>
-					<td><kbd>^ H</kbd> / <kbd>^ Shift+H</kbd></td>
-					<td>ĥ/Ĥ</td>
-				</tr>
-				<tr>
-					<td>
-						<kbd>AltGr+Shift+( U</kbd> / <kbd>AltGr+Shift+( Shift+U</kbd>
-					</td>
-					<td>ŭ/Ŭ</td>
-				</tr>
-			</table>
-		</li>
-		<li>
-			<p>
-				<a href="https://github.com/google/extra-keyboards-for-chrome-os">
-					Tajlorita klavara aranĝo de Google</a>: Google kreis deponejon en GitHub por aliaj klavaraj aranĝoj.
-				Ekzistas Esperanta klavara aranĝo, kiun oni povas instali, sed ĝi
-				estas nur mezkvalita.
-			</p>
-		</li>
-	</ul>
-	<h2 id="html">HTML</h2>
-	<p>
-		Por tajpi Esperantajn literojn en HTML, necesas uzi HTML-subtenatajn signojn.
-		Jen tabelo, kiu prezentas Esperantajn literojn, kaj iliajn respektivajn signojn.
-	</p>
-	<table>
-		<thead>
-			<th>Esperanta Litero</th>
-			<th>HTML-subtenata signo</th>
-		</thead>
-		<tr>
-			<td>Ĉ</td>
-			<td>
-				<kbd>&amp;Ccirc;</kbd>, <kbd>&amp;#x108;</kbd>,
-				<kbd>&amp;#264;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>ĉ</td>
-			<td>
-				<kbd>&amp;ccirc;</kbd>, <kbd>&amp;#x109;</kbd>,
-				<kbd>&amp;#265;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>Ĝ</td>
-			<td>
-				<kbd>&amp;Gcirc;</kbd>, <kbd>&amp;#x11C;</kbd>,
-				<kbd>&amp;#284;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>ĝ</td>
-			<td>
-				<kbd>&amp;gcirc;</kbd>, <kbd>&amp;#x11D;</kbd>,
-				<kbd>&amp;#285;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>Ĥ</td>
-			<td>
-				<kbd>&amp;Hcirc;</kbd>, <kbd>&amp;#x124;</kbd>,
-				<kbd>&amp;#292;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>ĥ</td>
-			<td>
-				<kbd>&amp;hcirc;</kbd>, <kbd>&amp;#x125;</kbd>,
-				<kbd>&amp;#293;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>Ĵ</td>
-			<td>
-				<kbd>&amp;Jcirc;</kbd>, <kbd>&amp;#x134;</kbd>,
-				<kbd>&amp;#308;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>ĵ</td>
-			<td>
-				<kbd>&amp;jcirc;</kbd>, <kbd>&amp;#x135;</kbd>,
-				<kbd>&amp;#309;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>Ŝ</td>
-			<td>
-				<kbd>&amp;Scirc;</kbd>, <kbd>&amp;#x15C;</kbd>,
-				<kbd>&amp;#348;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>ŝ</td>
-			<td>
-				<kbd>&amp;scirc;</kbd>, <kbd>&amp;#x15D;</kbd>,
-				<kbd>&amp;#349;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>Ŭ</td>
-			<td>
-				<kbd>&amp;Ubreve;</kbd>, <kbd>&amp;#x16C;</kbd>,
-				<kbd>&amp;#364;</kbd>
-			</td>
-		</tr>
-		<tr>
-			<td>ŭ</td>
-			<td>
-				<kbd>&amp;ubreve;</kbd>, <kbd>&amp;#x16D;</kbd>,
-				<kbd>&amp;#365;</kbd>
-			</td>
-		</tr>
-	</table>
-	<h2 id="aliajsistemoj">Aliaj Sistemoj por Skribi</h2>
-	<p>
-		Se tute ne eblas tajpi Esperantajn literojn, ekzistas du kromaj sistemoj
-		por prezenti ilin: la h-sistemo kaj la x-sistemo.
-	</p>
-	<h3>H-sistemo</h3>
-	<p>
-		La Akademio rekomendas, ke por aferoj, kiujn oni intencis legigi, oni uzu
-		la h-sistemon.
-	</p>
-	<table>
-		<thead>
-			<th>Esperanta Litero</th>
-			<th>H-Sistemo</th>
-		</thead>
-		<tr>
-			<td>ĉ</td>
-			<td>ch</td>
-		</tr>
-		<tr>
-			<td>ĝ</td>
-			<td>gh</td>
-		</tr>
-		<tr>
-			<td>ĥ</td>
-			<td>hh</td>
-		</tr>
-		<tr>
-			<td>ĵ</td>
-			<td>jh</td>
-		</tr>
-		<tr>
-			<td>ŝ</td>
-			<td>sh</td>
-		</tr>
-		<tr>
-			<td>ŭ</td>
-			<td>u</td>
-		</tr>
-	</table>
-	<h3>X-Sistemo</h3>
-	<p>
-		Kvankam la x-sistemo nun estas tre populara ĉie, la Akademio rekomendas,
-		ke oni uzu ĝin nur se ne eblas uzi la h-sistemon (ekz. en ASCII-a datumbazo).
-	</p>
-	<table>
-		<thead>
-			<th>Esperanta Litero</th>
-			<th>X-Sistemo</th>
-		</thead>
-		<tr>
-			<td>ĉ</td>
-			<td>cx</td>
-		</tr>
-		<tr>
-			<td>ĝ</td>
-			<td>gx</td>
-		</tr>
-		<tr>
-			<td>ĥ</td>
-			<td>hx</td>
-		</tr>
-		<tr>
-			<td>ĵ</td>
-			<td>jx</td>
-		</tr>
-		<tr>
-			<td>ŝ</td>
-			<td>sx</td>
-		</tr>
-		<tr>
-			<td>ŭ</td>
-			<td>ux</td>
-		</tr>
-	</table>
-	<h3>Cirila</h3>
-	<p>
-		Kvankam ĝi estas ne fundamenta, oni povas skribi Esperanton per la
-		cirila skribsistemo.
-	</p>
-	<table>
-		<thead>
-			<th>Cirila Litero</th>
-			<th>Esperanta Litero</th>
-		</thead>
-		<tr>
-			<td>А а</td>
-			<td>A a</td>
-		</tr>
-		<tr>
-			<td>Б б</td>
-			<td>B b</td>
-		</tr>
-		<tr>
-			<td>Ц ц</td>
-			<td>C c</td>
-		</tr>
-		<tr>
-			<td>Ч ч</td>
-			<td>Ĉ ĉ</td>
-		</tr>
-		<tr>
-			<td>Д д</td>
-			<td>D d</td>
-		</tr>
-		<tr>
-			<td>Е е</td>
-			<td>E e</td>
-		</tr>
-		<tr>
-			<td>Ф ф</td>
-			<td>F f</td>
-		</tr>
-		<tr>
-			<td>Г г</td>
-			<td>G g</td>
-		</tr>
-		<tr>
-			<td>Џ џ</td>
-			<td>Ĝ ĝ</td>
-		</tr>
-		<tr>
-			<td>Һ һ</td>
-			<td>H h</td>
-		</tr>
-		<tr>
-			<td>Х х</td>
-			<td>Ĥ ĥ</td>
-		</tr>
-		<tr>
-			<td>И и</td>
-			<td>I i</td>
-		</tr>
-		<tr>
-			<td>Ј ј</td>
-			<td>J j</td>
-		</tr>
-		<tr>
-			<td>Ж ж</td>
-			<td>Ĵ ĵ</td>
-		</tr>
-		<tr>
-			<td>К к</td>
-			<td>K k</td>
-		</tr>
-		<tr>
-			<td>Л л</td>
-			<td>L l</td>
-		</tr>
-		<tr>
-			<td>М м</td>
-			<td>M m</td>
-		</tr>
-		<tr>
-			<td>Н н</td>
-			<td>N n</td>
-		</tr>
-		<tr>
-			<td>О о</td>
-			<td>O o</td>
-		</tr>
-		<tr>
-			<td>П п</td>
-			<td>P p</td>
-		</tr>
-		<tr>
-			<td>Р р</td>
-			<td>R r</td>
-		</tr>
-		<tr>
-			<td>С с</td>
-			<td>S s</td>
-		</tr>
-		<tr>
-			<td>Ш ш</td>
-			<td>Ŝ ŝ</td>
-		</tr>
-		<tr>
-			<td>Т т</td>
-			<td>T t</td>
-		</tr>
-		<tr>
-			<td>У у</td>
-			<td>U u</td>
-		</tr>
-		<tr>
-			<td>Ў ў</td>
-			<td>Ŭ ŭ</td>
-		</tr>
-		<tr>
-			<td>В в</td>
-			<td>V v</td>
-		</tr>
-		<tr>
-			<td>З з</td>
-			<td>Z z</td>
-		</tr>
-	</table>
-	<h2 id="konvertilo">Konvertilo</h2>
-	<p>
-		Se ne ekzistas elekto por via aparato, vi povas uzi ĉi tiun tekstokampon,
-		kiu konvertos x-sisteman tekston al Esperantaj literoj.
-	</p>
-	<div class="konvertilo">
-		<noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
-		<textarea placeholder="Skribu ĉi tie" id="konvertilo-input"></textarea>
-		<button onclick="copyText()">Kopii</button>
-	</div>
-	<h2 id="kontakti">Kontakt-informoj</h2>
-	<p>
-		Se vi trovas erarojn aŭ aliajn problemojn, sendu retpoŝton al mi ĉe
-		<a href="mailto:retestro@sgertu.com">retestro@sgertu.com</a>
-	</p>
-	<h2 id="agnostoj">Agnostoj</h2>
-	<ul>
-		<li>
-			<a href="https://loganhall.net/eo/faq-en.html">CodeWeaver (loganhall.net)</a> - Informoj pri esperantaj klavaroj
-		</li>
-		<li>Katokoda - Tradukoj</li>
-		<li>Marko / postgarf - Informoj pri la kunigo-klavo</li>
-		<li>
-			<a href="https://en.wikipedia.org/wiki/Inputting_Esperanto_text_on_computers">Vikipedio</a>
-		</li>
-		<li>
-			<a href="https://omniglot.com/conscripts/esperantocyrillic.htm">
-				Есперанто-цирила
-			</a> - Informoj pri la cirila skribsistemo
-		</li>
-	</ul>
-	<p class="copyright">&copy; Aŝlio 2022</p>
-	<script defer type="text/javascript" src="./public/typer.js"></script>
-	<script defer type="text/javascript" src="./public/konvertilo.js"></script>
-	<script>
-		function copyText() {
-			navigator.clipboard.writeText(document.getElementById('konvertilo-input').value);
-		}
-	</script>
-</body>
-
+  <body>
+    <nav>
+      <a href="/">Esperanto</a>
+      <a href="/en">English</a>
+    </nav>
+    <h1>«<span id="keyboardname" tabindex="0">ŝĝertŭ</span>»</h1>
+    <p>
+      Esperanto havas ses litorojn, kiuj ne ekzistas en plej multe da klavaroj:
+      ĉ, ĝ, ĥ, ĵ, ŝ, kaj ŭ. Ĉi tiu retpaĝo instruos al vi pri kiel vi povas
+      tajpi ilin en via komputilo aŭ poŝtelefono. Ĝi ankaŭ havas «konvertilon»,
+      kiu konvertos la x-sistemon al esperantaj literoj.
+    </p>
+    <h2>Enhavtabelo</h2>
+    <ul>
+      <li><a href="#klavaro">Esperantaj klavaroj</a></li>
+      <li><a href="#html">HTML</a></li>
+      <li><a href="#aliajsistemoj">Aliaj sistemoj por Skribi</a></li>
+      <li><a href="#konvertilo">Konvertilo</a></li>
+      <li><a href="#kontakti">Kontakt-informoj</a></li>
+      <li><a href="#agnostoj">Agnostoj</a></li>
+    </ul>
+    <h2 id="klavaro">Esperantaj Klavaroj</h2>
+    <p>
+      Ĉi tiu parto prezentas programarojn kaj instrukciojn por tajpi esperantajn
+      literojn en via komputilo aŭ poŝtelefono.
+    </p>
+    <h3>Operaciumoj</h3>
+    <ul>
+      <li><a href="#windows">Windows</a></li>
+      <li><a href="#macos">macOS</a></li>
+      <li><a href="#linux">Linux</a></li>
+      <li><a href="#android">Android</a></li>
+      <li><a href="#ios">iOS / iPad OS</a></li>
+      <li><a href="#chromeos">Chrome OS</a></li>
+    </ul>
+    <h4 id="windows">Windows</h4>
+    <ul>
+      <li>
+        <a href="http://www.zz9pza.net/tajpi/en/">Tajpi</a>: Programaro, kiu tuj
+        konvertas vian enigon («sx», «gh», k.t.p.) al esperantaj literoj.
+        (Spegulo:
+        <a
+          target="_blank"
+          href="https://sgertu.s3.ap-southeast-2.amazonaws.com/tajpi298inst.exe"
+          >Instalilo</a
+        >,
+        <a
+          target="_blank"
+          href="https://sgertu.s3.ap-southeast-2.amazonaws.com/tajpi298font.zip"
+          >Fontkodo</a
+        >)
+      </li>
+      <li>
+        <a
+          href="https://cdn.discordapp.com/attachments/688501845974450190/859833254965542963/eo.zip"
+          >Tajlorita klavararanĝo de CodeWeaver</a
+        >: Kiam ĝi estas instalita, aldonu ĝin kiel kroma klavaro en la
+        lingvagordoj.
+      </li>
+    </ul>
+    <h4 id="macos">macOS</h4>
+    <ul>
+      <li>
+        La klavara aranĝo "ABC - Extended" povas tajpi Esperantajn literojn. Ĉi
+        tiu tabelo prezentas la klavojn, kiujn vi devas uzi por Esperantaj
+        literoj.
+        <table>
+          <thead>
+            <th>Tajpu</th>
+            <th>Por Tajpi</th>
+          </thead>
+          <tr>
+            <td><kbd>⌥+6 C</kbd>/<kbd>⌥+6 ⇧+C</kbd></td>
+            <td>ĉ/Ĉ</td>
+          </tr>
+          <tr>
+            <td><kbd>⌥+6 G</kbd>/<kbd>⌥+6 ⇧+G</kbd></td>
+            <td>ĝ/Ĝ</td>
+          </tr>
+          <tr>
+            <td><kbd>⌥+6 H</kbd>/<kbd>⌥+6 ⇧+H</kbd></td>
+            <td>ĥ/Ĥ</td>
+          </tr>
+          <tr>
+            <td><kbd>⌥+6 J</kbd>/<kbd>⌥+6 ⇧+J</kbd></td>
+            <td>ĵ/Ĵ</td>
+          </tr>
+          <tr>
+            <td><kbd>⌥+6 S</kbd>/<kbd>⌥+6 ⇧+S</kbd></td>
+            <td>ŝ/Ŝ</td>
+          </tr>
+          <tr>
+            <td><kbd>⌥+B U</kbd>/<kbd>⌥+B ⇧+U</kbd></td>
+            <td>ŭ/Ŭ</td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <a
+          href="https://cdn.discordapp.com/attachments/688501845974450190/940998971759935518/Esperanto.dmg"
+          >Tajlorita klavararanĝo de CodeWeaver</a
+        >
+      </li>
+      <li>
+        <a href="https://github.com/PumpedSardines/Tajpi/tree/1.1.2#tajpi"
+          >macOS-a versio de Tajpi</a
+        >
+      </li>
+    </ul>
+    <h4 id="linux">Linux</h4>
+    <p>
+      Plej multe da Linux-distribuoj jam havas Esperantan klavaron. Ĝi estas
+      trovebla en la agordoj.
+    </p>
+    <p>
+      Oni ankaŭ povas uzi la kunigo-klavon por tajpi esperantan literojn.
+      <a href="https://eo.wikipedia.org/wiki/Kunigo-klavo">Vikipedio</a>
+      havas pli multe informojn.
+    </p>
+    <table>
+      <thead>
+        <th>Tajpu</th>
+        <th>Por Tajpi</th>
+      </thead>
+      <tr>
+        <td><kbd>Kunigo+^+c</kbd> / <kbd>Kunigo+^+C</kbd></td>
+        <td>ĉ/Ĉ</td>
+      </tr>
+      <tr>
+        <td><kbd>Kunigo+^+s</kbd> / <kbd>Kunigo+^+S</kbd></td>
+        <td>ŝ/Ŝ</td>
+      </tr>
+      <tr>
+        <td><kbd>Kunigo+^+g</kbd> / <kbd>Kunigo+^+G</kbd></td>
+        <td>ĝ/Ĝ</td>
+      </tr>
+      <tr>
+        <td><kbd>Kunigo+^+j</kbd> / <kbd>Kunigo+^+J</kbd></td>
+        <td>ĵ/Ĵ</td>
+      </tr>
+      <tr>
+        <td><kbd>Kunigo+^+h</kbd> / <kbd>Kunigo+^+h</kbd></td>
+        <td>ĥ/Ĥ</td>
+      </tr>
+      <tr>
+        <td><kbd>Kunigo+u+u</kbd> / <kbd>Kunigo+u+U</kbd></td>
+        <td>ŭ/Ŭ</td>
+      </tr>
+    </table>
+    <h4 id="android">Android</h4>
+    <p>
+      Por tajpi en Esperanto, necesas elŝuti klavaron de ekstera liveranto. En
+      Android vi havas du elektojn:
+    </p>
+    <ul>
+      <li>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.google.android.inputmethod.latin&hl=en_US&gl=US"
+          >Gboard</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://play.google.com/store/apps/details?id=com.touchtype.swiftkey"
+          >Swiftkey</a
+        >
+      </li>
+    </ul>
+    <h4 id="ios">iOS / iPad OS</h4>
+    <p>
+      Vi devos elŝuti aparte liveritan klavaron, kiu subtenas Esperanton. En
+      iOS,
+      <a
+        href="https://apps.apple.com/us/app/microsoft-swiftkey-keyboard/id911813648"
+        >SwiftKey</a
+      >
+      estas la plej bona elekto.
+    </p>
+    <h4 id="chromeos">Chrome OS</h4>
+    <p>
+      Ne ekzistas tre bonaj elektoj per Chrome OS, sed ja estas eble tajpi
+      Esperantajn literojn.
+    </p>
+    <ul>
+      <li>
+        <p>
+          La klavara aranĝo "US International Keyboard" povas tajpi Esperantajn
+          literojn. Ĉi tiu tabelo prezentas la klavojn, kiujn vi devas uzi por
+          Esperantaj literoj.
+        </p>
+        <table>
+          <thead>
+            <th>Tajpu</th>
+            <th>Por Tajpi</th>
+          </thead>
+          <tr>
+            <td><kbd>^ C</kbd> / <kbd>^ Shift+C</kbd></td>
+            <td>ĉ/Ĉ</td>
+          </tr>
+          <tr>
+            <td><kbd>^ S</kbd> / <kbd>^ Shift+S</kbd></td>
+            <td>ŝ/Ŝ</td>
+          </tr>
+          <tr>
+            <td><kbd>^ G</kbd> / <kbd>^ Shift+G</kbd></td>
+            <td>ĝ/Ĝ</td>
+          </tr>
+          <tr>
+            <td><kbd>^ J</kbd> / <kbd>^ Shift+J</kbd></td>
+            <td>ĵ/Ĵ</td>
+          </tr>
+          <tr>
+            <td><kbd>^ H</kbd> / <kbd>^ Shift+H</kbd></td>
+            <td>ĥ/Ĥ</td>
+          </tr>
+          <tr>
+            <td>
+              <kbd>AltGr+Shift+( U</kbd> / <kbd>AltGr+Shift+( Shift+U</kbd>
+            </td>
+            <td>ŭ/Ŭ</td>
+          </tr>
+        </table>
+      </li>
+      <li>
+        <p>
+          <a href="https://github.com/google/extra-keyboards-for-chrome-os">
+            Tajlorita klavara aranĝo de Google</a
+          >: Google kreis deponejon en GitHub por aliaj klavaraj aranĝoj.
+          Ekzistas Esperanta klavara aranĝo, kiun oni povas instali, sed ĝi
+          estas nur mezkvalita.
+        </p>
+      </li>
+    </ul>
+    <h2 id="html">HTML</h2>
+    <p>
+      Por tajpi Esperantajn literojn en HTML, necesas uzi HTML-subtenatajn
+      signojn. Jen tabelo, kiu prezentas Esperantajn literojn, kaj iliajn
+      respektivajn signojn.
+    </p>
+    <table>
+      <thead>
+        <th>Esperanta Litero</th>
+        <th>HTML-subtenata signo</th>
+      </thead>
+      <tr>
+        <td>Ĉ</td>
+        <td>
+          <kbd>&amp;Ccirc;</kbd>, <kbd>&amp;#x108;</kbd>,
+          <kbd>&amp;#264;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>ĉ</td>
+        <td>
+          <kbd>&amp;ccirc;</kbd>, <kbd>&amp;#x109;</kbd>,
+          <kbd>&amp;#265;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>Ĝ</td>
+        <td>
+          <kbd>&amp;Gcirc;</kbd>, <kbd>&amp;#x11C;</kbd>,
+          <kbd>&amp;#284;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>ĝ</td>
+        <td>
+          <kbd>&amp;gcirc;</kbd>, <kbd>&amp;#x11D;</kbd>,
+          <kbd>&amp;#285;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>Ĥ</td>
+        <td>
+          <kbd>&amp;Hcirc;</kbd>, <kbd>&amp;#x124;</kbd>,
+          <kbd>&amp;#292;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>ĥ</td>
+        <td>
+          <kbd>&amp;hcirc;</kbd>, <kbd>&amp;#x125;</kbd>,
+          <kbd>&amp;#293;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>Ĵ</td>
+        <td>
+          <kbd>&amp;Jcirc;</kbd>, <kbd>&amp;#x134;</kbd>,
+          <kbd>&amp;#308;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>ĵ</td>
+        <td>
+          <kbd>&amp;jcirc;</kbd>, <kbd>&amp;#x135;</kbd>,
+          <kbd>&amp;#309;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>Ŝ</td>
+        <td>
+          <kbd>&amp;Scirc;</kbd>, <kbd>&amp;#x15C;</kbd>,
+          <kbd>&amp;#348;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>ŝ</td>
+        <td>
+          <kbd>&amp;scirc;</kbd>, <kbd>&amp;#x15D;</kbd>,
+          <kbd>&amp;#349;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>Ŭ</td>
+        <td>
+          <kbd>&amp;Ubreve;</kbd>, <kbd>&amp;#x16C;</kbd>,
+          <kbd>&amp;#364;</kbd>
+        </td>
+      </tr>
+      <tr>
+        <td>ŭ</td>
+        <td>
+          <kbd>&amp;ubreve;</kbd>, <kbd>&amp;#x16D;</kbd>,
+          <kbd>&amp;#365;</kbd>
+        </td>
+      </tr>
+    </table>
+    <h2 id="aliajsistemoj">Aliaj Sistemoj por Skribi</h2>
+    <p>
+      Se tute ne eblas tajpi Esperantajn literojn, ekzistas du kromaj sistemoj
+      por prezenti ilin: la h-sistemo kaj la x-sistemo.
+    </p>
+    <h3>H-sistemo</h3>
+    <p>
+      La Akademio rekomendas, ke por aferoj, kiujn oni intencis legigi, oni uzu
+      la h-sistemon.
+    </p>
+    <table>
+      <thead>
+        <th>Esperanta Litero</th>
+        <th>H-Sistemo</th>
+      </thead>
+      <tr>
+        <td>ĉ</td>
+        <td>ch</td>
+      </tr>
+      <tr>
+        <td>ĝ</td>
+        <td>gh</td>
+      </tr>
+      <tr>
+        <td>ĥ</td>
+        <td>hh</td>
+      </tr>
+      <tr>
+        <td>ĵ</td>
+        <td>jh</td>
+      </tr>
+      <tr>
+        <td>ŝ</td>
+        <td>sh</td>
+      </tr>
+      <tr>
+        <td>ŭ</td>
+        <td>u</td>
+      </tr>
+    </table>
+    <h3>X-Sistemo</h3>
+    <p>
+      Kvankam la x-sistemo nun estas tre populara ĉie, la Akademio rekomendas,
+      ke oni uzu ĝin nur se ne eblas uzi la h-sistemon (ekz. en ASCII-a
+      datumbazo).
+    </p>
+    <table>
+      <thead>
+        <th>Esperanta Litero</th>
+        <th>X-Sistemo</th>
+      </thead>
+      <tr>
+        <td>ĉ</td>
+        <td>cx</td>
+      </tr>
+      <tr>
+        <td>ĝ</td>
+        <td>gx</td>
+      </tr>
+      <tr>
+        <td>ĥ</td>
+        <td>hx</td>
+      </tr>
+      <tr>
+        <td>ĵ</td>
+        <td>jx</td>
+      </tr>
+      <tr>
+        <td>ŝ</td>
+        <td>sx</td>
+      </tr>
+      <tr>
+        <td>ŭ</td>
+        <td>ux</td>
+      </tr>
+    </table>
+    <h3>Cirila</h3>
+    <p>
+      Kvankam ĝi estas ne fundamenta, oni povas skribi Esperanton per la cirila
+      skribsistemo.
+    </p>
+    <table>
+      <thead>
+        <th>Cirila Litero</th>
+        <th>Esperanta Litero</th>
+      </thead>
+      <tr>
+        <td>А а</td>
+        <td>A a</td>
+      </tr>
+      <tr>
+        <td>Б б</td>
+        <td>B b</td>
+      </tr>
+      <tr>
+        <td>Ц ц</td>
+        <td>C c</td>
+      </tr>
+      <tr>
+        <td>Ч ч</td>
+        <td>Ĉ ĉ</td>
+      </tr>
+      <tr>
+        <td>Д д</td>
+        <td>D d</td>
+      </tr>
+      <tr>
+        <td>Е е</td>
+        <td>E e</td>
+      </tr>
+      <tr>
+        <td>Ф ф</td>
+        <td>F f</td>
+      </tr>
+      <tr>
+        <td>Г г</td>
+        <td>G g</td>
+      </tr>
+      <tr>
+        <td>Џ џ</td>
+        <td>Ĝ ĝ</td>
+      </tr>
+      <tr>
+        <td>Һ һ</td>
+        <td>H h</td>
+      </tr>
+      <tr>
+        <td>Х х</td>
+        <td>Ĥ ĥ</td>
+      </tr>
+      <tr>
+        <td>И и</td>
+        <td>I i</td>
+      </tr>
+      <tr>
+        <td>Ј ј</td>
+        <td>J j</td>
+      </tr>
+      <tr>
+        <td>Ж ж</td>
+        <td>Ĵ ĵ</td>
+      </tr>
+      <tr>
+        <td>К к</td>
+        <td>K k</td>
+      </tr>
+      <tr>
+        <td>Л л</td>
+        <td>L l</td>
+      </tr>
+      <tr>
+        <td>М м</td>
+        <td>M m</td>
+      </tr>
+      <tr>
+        <td>Н н</td>
+        <td>N n</td>
+      </tr>
+      <tr>
+        <td>О о</td>
+        <td>O o</td>
+      </tr>
+      <tr>
+        <td>П п</td>
+        <td>P p</td>
+      </tr>
+      <tr>
+        <td>Р р</td>
+        <td>R r</td>
+      </tr>
+      <tr>
+        <td>С с</td>
+        <td>S s</td>
+      </tr>
+      <tr>
+        <td>Ш ш</td>
+        <td>Ŝ ŝ</td>
+      </tr>
+      <tr>
+        <td>Т т</td>
+        <td>T t</td>
+      </tr>
+      <tr>
+        <td>У у</td>
+        <td>U u</td>
+      </tr>
+      <tr>
+        <td>Ў ў</td>
+        <td>Ŭ ŭ</td>
+      </tr>
+      <tr>
+        <td>В в</td>
+        <td>V v</td>
+      </tr>
+      <tr>
+        <td>З з</td>
+        <td>Z z</td>
+      </tr>
+    </table>
+    <h2 id="konvertilo">Konvertilo</h2>
+    <p>
+      Se ne ekzistas elekto por via aparato, vi povas uzi ĉi tiun tekstokampon,
+      kiu konvertos x-sisteman tekston al Esperantaj literoj.
+    </p>
+    <div class="konvertilo">
+      <textarea
+        disabled
+        placeholder="Skribu ĉi tie"
+        id="konvertilo-input"
+      ></textarea>
+      <button onclick="copyText()">Kopii</button>
+    </div>
+    <noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
+    <h2 id="kontakti">Kontakt-informoj</h2>
+    <p>
+      Se vi trovas erarojn aŭ aliajn problemojn, sendu retpoŝton al mi ĉe
+      <a href="mailto:retestro@sgertu.com">retestro@sgertu.com</a>
+    </p>
+    <h2 id="agnostoj">Agnostoj</h2>
+    <ul>
+      <li>
+        <a href="https://loganhall.net/eo/faq-en.html"
+          >CodeWeaver (loganhall.net)</a
+        >
+        - Informoj pri esperantaj klavaroj
+      </li>
+      <li>Katokoda - Tradukoj</li>
+      <li>Marko / postgarf - Informoj pri la kunigo-klavo</li>
+      <li>
+        <a
+          href="https://en.wikipedia.org/wiki/Inputting_Esperanto_text_on_computers"
+          >Vikipedio</a
+        >
+      </li>
+      <li>
+        <a href="https://omniglot.com/conscripts/esperantocyrillic.htm">
+          Есперанто-цирила
+        </a>
+        - Informoj pri la cirila skribsistemo
+      </li>
+    </ul>
+    <p class="copyright">&copy; Aŝlio 2022</p>
+    <script defer type="text/javascript" src="./public/typer.js"></script>
+    <script defer type="text/javascript" src="./public/konvertilo.js"></script>
+    <script>
+      function copyText() {
+        navigator.clipboard.writeText(
+          document.getElementById("konvertilo-input").value,
+        );
+      }
+			document.getElementById('konvertilo-input').disabled = false;
+    </script>
+  </body>
 </html>

@@ -27,9 +27,8 @@
   }
 }
 
-
 * {
-  font-family: 'Courier Prime', monospace;
+  font-family: "Courier Prime", monospace;
   color: var(--font-color);
 }
 
@@ -68,7 +67,7 @@ h2 {
 
 h1::before,
 h2::before {
-  content: '★ ';
+  content: "★ ";
   color: var(--link-color);
 }
 
@@ -94,8 +93,7 @@ table {
 }
 
 table td,
-table th
-{
+table th {
   padding: 0.4rem 0.5rem;
   text-align: center;
   border-right: var(--border);
@@ -137,7 +135,7 @@ textarea {
 }
 
 noscript {
-  background: #DC3545;
+  background: #dc3545;
   padding: 1rem;
   border-radius: 8px;
 }
@@ -158,6 +156,10 @@ noscript {
   right: 0;
   opacity: 0;
   transition: opacity ease-in-out 300ms;
+}
+
+.konvertilo[disabled] button {
+  display: none;
 }
 
 .konvertilo:hover button,
