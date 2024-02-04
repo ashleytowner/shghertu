@@ -556,20 +556,11 @@
 		Se ne ekzistas elekto por via aparato, vi povas uzi ĉi tiun tekstokampon,
 		kiu konvertos x-sisteman tekston al Esperantaj literoj.
 	</p>
-	<script>
-		function copyText() {
-			navigator.clipboard.writeText(document.getElementById('konvertilo-input').value);
-		}
-		document.write(
-			`
-        <div class="konvertilo">
-          <textarea placeholder="Skribu ĉi tie" id="konvertilo-input"></textarea>
-          <button onclick="copyText()">Kopii</button>
-        </div>
-        `
-		);
-	</script>
-	<noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
+	<div class="konvertilo">
+		<noscript>Vi devas aktivigi "javascript" por uzi la konvertilon.</noscript>
+		<textarea placeholder="Skribu ĉi tie" id="konvertilo-input"></textarea>
+		<button onclick="copyText()">Kopii</button>
+	</div>
 	<h2 id="kontakti">Kontakt-informoj</h2>
 	<p>
 		Se vi trovas erarojn aŭ aliajn problemojn, sendu retpoŝton al mi ĉe
@@ -592,8 +583,13 @@
 		</li>
 	</ul>
 	<p class="copyright">&copy; Aŝlio 2022</p>
-	<script type="text/javascript" src="./public/typer.js"></script>
-	<script type="text/javascript" src="./public/konvertilo.js"></script>
+	<script defer type="text/javascript" src="./public/typer.js"></script>
+	<script defer type="text/javascript" src="./public/konvertilo.js"></script>
+	<script>
+		function copyText() {
+			navigator.clipboard.writeText(document.getElementById('konvertilo-input').value);
+		}
+	</script>
 </body>
 
 </html>
