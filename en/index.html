@@ -600,21 +600,14 @@
       If there isn't an option for your device, you can use this text box to
       convert to esperanto characters (Use the x-system):
     </p>
-    <script>
-      function copyText() {
-        navigator.clipboard.writeText(
-          document.getElementById("konvertilo-input").value,
-        );
-      }
-      document.write(
-        `
-        <div class="konvertilo">
-          <textarea placeholder="Write Here" id="konvertilo-input"></textarea>
-          <button onclick="copyText()">Copy</button>
-        </div>
-        `,
-      );
-    </script>
+    <div class="konvertilo">
+      <textarea
+        disabled
+        placeholder="Write Here"
+        id="konvertilo-input"
+      ></textarea>
+      <button onclick="copyText()">Copy</button>
+    </div>
     <noscript>You must activate "javascript" to use the converter.</noscript>
     <h2 id="kontakti">Contact Information</h2>
     <p>
@@ -644,8 +637,16 @@
         - Information about the Cyrillic writing-system
       </li>
     </ul>
-    <p class="copyright">&copy; Ashley 2022</p>
-    <script type="text/javascript" src="./public/typer.js"></script>
-    <script type="text/javascript" src="./public/konvertilo.js"></script>
+    <p class="copyright">&copy; Aŝlio 2022</p>
+    <script defer type="text/javascript" src="./public/typer.js"></script>
+    <script defer type="text/javascript" src="./public/konvertilo.js"></script>
+    <script>
+      function copyText() {
+        navigator.clipboard.writeText(
+          document.getElementById("konvertilo-input").value,
+        );
+      }
+			document.getElementById('konvertilo-input').disabled = false;
+    </script>
   </body>
 </html>
